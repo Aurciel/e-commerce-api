@@ -13,10 +13,6 @@ router.get('/', async (req, res) => {
         .find()
         .select({'title':1 , 'desc':2, 'price':3})
         .sort('title');
-    //let productlist = [];
-    /*products.forEach((product) => {
-        productlist.push(_.pick(product, [ 'title', 'desc','price']));
-    });*/
     res.send(products);
 });
 
